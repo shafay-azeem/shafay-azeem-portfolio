@@ -14,6 +14,46 @@
   </head>
 
   <body oncontextmenu="return false">
+    <!-- Floating Phone Button -->
+    <div
+      style="
+        position: fixed;
+        bottom: 70px;
+        left: 20px;
+        z-index: 9999;
+        height: 50px;
+        width: 50px;
+      "
+    >
+      <img
+        src="assets/img/reciever.png"
+        style="height: 50px; width: 50px; border-radius: 50px; cursor: pointer"
+        onclick="handlePhoneButton()"
+        alt="Phone"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div
+      style="
+        position: fixed;
+        bottom: 10px;
+        left: 20px;
+        z-index: 9999;
+        height: 50px;
+        width: 50px;
+      "
+    >
+      <img
+        src="assets/img/whatsapp.png"
+        style="height: 50px; width: 50px; border-radius: 50px; cursor: pointer"
+        onclick="handleWhatsappButton()"
+        alt="WhatsApp"
+        loading="lazy"
+      />
+    </div>
+
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav__logo">Shafay Azeem</a>
@@ -113,7 +153,7 @@
                     class="home__blob-img"
                     x="-79"
                     y="-45"
-                    xlink:href="assets/img/Pro.jpg"
+                    href="assets/img/Pro.jpg"
                   />
                 </g>
               </svg>
@@ -123,7 +163,7 @@
               <h3 class="home__subtitle">Experienced Full-stack Developer</h3>
               <p class="home__description">
                 Pursuing Masters in Artificial Intelligence at
-                <strong>FAU Erlangen Nürnberg,</strong>Germany.
+                <strong>FAU Erlangen Nürnberg,</strong> Germany.
               </p>
               <a href="#contact" class="button button--flex">
                 Contact me<i class="uil uil-message button__icon"></i>
@@ -145,7 +185,7 @@
 
       <section class="about section" id="about">
         <h2 class="section__title">About Me</h2>
-        <span class="section__subtitle">My introduction</span>
+        <!-- <span class="section__subtitle">My introduction</span> -->
 
         <div class="about__container container grid">
           <img src="assets\img\about.jpg" alt="" class="about__img" />
@@ -161,18 +201,18 @@
 
             <div class="about__info">
               <div>
-                <span class="about__info-title">1.7/5.00 </span>
-                <span class="about__info-name">EU</span>
+                <span class="about__info-title">1.7/5 </span>
+                <span class="about__info-name">EU CGPA</span>
               </div>
 
               <div>
                 <span class="about__info-title"> 10+</span>
-                <span class="about__info-name"> Projects</span>
+                <span class="about__info-name">PROJECTS</span>
               </div>
 
               <div>
                 <span class="about__info-title">3+</span>
-                <span class="about__info-name">Years <br />Experience</span>
+                <span class="about__info-name">YEARS<br />EXPERIENCE</span>
               </div>
             </div>
 
@@ -327,8 +367,8 @@
         class="qualification__section service__section"
         id="qualification"
       >
-        <h2 class="section__title">Qualification</h2>
-        <span class="section__subtitle">My personal journey</span>
+        <h2 class="section__title">Qualification & Certification</h2>
+        <!-- <span class="section__subtitle">My personal journey</span> -->
 
         <div
           class="qualification__container container grid services__container"
@@ -611,8 +651,8 @@
 
       <!--=================== Portfolio ===================-->
       <section class="portfolio section" id="portfolio">
-        <h2 class="section__title">Projects</h2>
-        <span class="section__subtitle">Most recent work</span>
+        <h2 class="section__title">Recent Projects</h2>
+        <!-- <span class="section__subtitle">Most recent work</span> -->
 
         <div class="portfolio__container container swiper-container">
           <div class="swiper-wrapper">
@@ -742,7 +782,7 @@
       <!--===================== Contact Me =====================-->
       <section class="contact section" id="contact">
         <h2 class="section__title">Contact Me</h2>
-        <span class="section__subtitle">Get in touch</span>
+        <!-- <span class="section__subtitle">Get in touch</span> -->
 
         <div class="contact__container container grid">
           <div>
@@ -767,8 +807,9 @@
                 <a
                   href="mailto:shafayazeemcareer@gmail.com"
                   class="contact__subtitle"
-                  >shafayazeemcareer@gmail.com</a
                 >
+                  shafayazeemcareer@gmail.com
+                </a>
               </div>
             </div>
 
@@ -828,7 +869,7 @@
         <div class="footer__container container grid">
           <div>
             <h1 class="footer__title">SHAFAY</h1>
-            <span class="footer__subtitle">or MSc AI @ FAU |</span>
+            <span class="footer__subtitle">MSc AI @ FAU</span>
           </div>
 
           <ul class="footer__links">
@@ -889,6 +930,16 @@
           link.click();
           document.body.removeChild(link);
         });
+    </script>
+
+    <script>
+      function handleWhatsappButton() {
+        window.open("https://wa.me/+49 1575 0746520");
+      }
+
+      function handlePhoneButton() {
+        window.location.href = "tel:+49 1575 0746520";
+      }
     </script>
   </body>
 </html>
